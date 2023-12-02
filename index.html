@@ -72,7 +72,131 @@
     .angka-item p {
       font-size: 13px;
     }
+
+
+    /** wedo-container */
+    .container-what-wedo {
+      padding: 5px 20px 20px;
+      margin-top: 30px;
+      background-color: #d9d9d9;
+    }
+    .what-wedo {
+      text-align: center;
+    }
+    .what-wedo h1 {
+      font-family: sans-serif;
+      text-transform: capitalize;
+      font-size: 30px;
+      font-weight: lighter;
+    }
+
+    .wedo-description {
+      display: flex;
+    justify-content: center;
+    }
+    .wedo-title-description {
+      width: 500px;
+    background: #fff;
+    text-align: center;
+    border-radius: 40px;
+    padding: 20px 25px;
+    font-family: sans-serif;
+    }
+
+    .wedo-item-container {
+      display: flex;
+      width: 100%;
+      overflow-x: auto;
+      margin-bottom: 20px;
+      height: 325px;
+    }
+    .wedo-scroll-hide {
+      width: 100%;
+    height: 310px;
+    overflow: hidden;
+    margin-bottom: 22px;
+    position: relative;
+    }
+    .wedo-item {
+      margin-right: 20px;
+    position: relative;
+    }
+    .wedo-item img {
+      width: 200px;
+    }
+    .wedo-item-title {
+      position: absolute;
+    bottom: 45px;
+    background-color: #333;
+    width: 160px;
+    right: 10%;
+    display: flex;
+    border: 1px solid #ebebeb;
+    border-radius: 83px;
+    padding: 10px 0px;
+    }
+    .wedo-item-title p{
+      font-size: 18px;
+    color: #fff;
+    text-align: center;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    margin: 0;
+    }
+
+
+    .pagination-parent {
+      position: absolute;
+    z-index: 999999;
+    top: 110px;
+    display: flex;
+    width: 100%;
+    }
+
+    .pagination-parent .left {
+      background-color: blue;
+    padding: 15px;
+    border-radius: 15px;
+    }
+    .pagination-parent a {
+      color: #fff;
+    }
+    .pagination-parent .right {
+      right: 0;
+    position: absolute;
+    top: 0;
+    background-color: blue;
+    padding: 15px;
+    border-radius: 15px;
+    }
   </style>
+
+<script>
+
+  var element = document.querySelector('#element');
+
+  function scrollRight() {
+      element.scrollLeft = element.scrollWidth;
+  }
+
+
+
+  let i = 0;
+  function handleScrollLeft() {
+    console.log('test left')
+    var element = document.querySelector('.wedo-item-container')
+    i -= 45
+    console.log(i)
+    element.scrollLeft = i
+  }
+  function handleScrollRight() {
+    console.log('test right')
+    var element = document.querySelector('.wedo-item-container')
+    i += 45
+    console.log(i)
+    element.scrollLeft = i
+  }
+</script>
   <body>
     <div class="container">
       <div class="about-title-parent">
@@ -112,6 +236,116 @@
               <p>5 stars review</p>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-what-wedo">
+      <div class="what-wedo">
+        <h1>what we do?</h1>
+      </div>
+      <div class="wedo-scroll-hide">
+        <div class="pagination-parent">
+          <div class="left">
+            <a href="#" onclick="handleScrollLeft();">left</a>
+          </div>
+          <div class="right">
+            <a href="#" onclick="handleScrollRight();">right</a>
+          </div>
+        </div>
+      <div class="wedo-item-container">
+        <div class="wedo-item">
+          <img src="images/wedo-item.png"/>
+          <div class="wedo-item-title">
+            <p>
+              web design & development
+            </p>
+          </div>
+        </div>
+        <div class="wedo-item">
+          <img src="images/wedo-item.png"/>
+          <div class="wedo-item-title">
+            <p>
+              web design & development
+            </p>
+          </div>
+        </div>
+
+        <div class="wedo-item">
+          <img src="images/wedo-item.png"/>
+          <div class="wedo-item-title">
+            <p>
+              web design & development
+            </p>
+          </div>
+        </div>
+
+        <div class="wedo-item">
+          <img src="images/wedo-item.png"/>
+          <div class="wedo-item-title">
+            <p>
+              web design & development
+            </p>
+          </div>
+        </div>
+
+        <div class="wedo-item">
+          <img src="images/wedo-item.png"/>
+          <div class="wedo-item-title">
+            <p>
+              web design & development
+            </p>
+          </div>
+        </div>
+
+        <div class="wedo-item">
+          <img src="images/wedo-item.png"/>
+          <div class="wedo-item-title">
+            <p>
+              web design & development
+            </p>
+          </div>
+        </div>
+
+        <div class="wedo-item">
+          <img src="images/wedo-item.png"/>
+          <div class="wedo-item-title">
+            <p>
+              web design & development
+            </p>
+          </div>
+        </div>
+
+        <div class="wedo-item">
+          <img src="images/wedo-item.png"/>
+          <div class="wedo-item-title">
+            <p>
+              web design & development
+            </p>
+          </div>
+        </div>
+
+        <div class="wedo-item">
+          <img src="images/wedo-item.png"/>
+          <div class="wedo-item-title">
+            <p>
+              web design & development
+            </p>
+          </div>
+        </div>
+
+        <div class="wedo-item">
+          <img src="images/wedo-item.png"/>
+          <div class="wedo-item-title">
+            <p>
+              web design & development
+            </p>
+          </div>
+        </div>
+      </div></div>
+      <div class="wedo-description">
+        <div class="wedo-title-description">
+          Our services are tailored to meet the unique needs of each client, ensuring that we deliver effective solutions that help businesses grow.
         </div>
       </div>
     </div>
