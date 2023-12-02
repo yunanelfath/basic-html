@@ -1,5 +1,6 @@
 <html>
   <title>Free html css - Update</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <style>
     body {
       margin: 0;
@@ -182,19 +183,24 @@
 
 
   let i = 0;
+  const scrollStep = 460
+  const scrollSpeed = 950
   function handleScrollLeft() {
     console.log('test left')
     var element = document.querySelector('.wedo-item-container')
-    i -= 45
-    console.log(i)
-    element.scrollLeft = i
+    i -= scrollStep
+    // console.log(i)
+    // element.scrollLeft = i
+    $(element).animate({scrollLeft: i}, scrollSpeed);
   }
   function handleScrollRight() {
-    console.log('test right')
+    // console.log($)
+    // console.log('test right')
     var element = document.querySelector('.wedo-item-container')
-    i += 45
-    console.log(i)
-    element.scrollLeft = i
+    i += scrollStep
+    // console.log(i)
+    // element.scrollLeft = i
+    $(element).animate({scrollLeft: i}, scrollSpeed);
   }
 </script>
   <body>
