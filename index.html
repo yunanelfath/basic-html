@@ -4,22 +4,116 @@
     body {
       margin: 0;
     }
-    .gambar1{
-      width: 100%;
-      height: 250px;
+    .container {
+      padding: 0 20px;
+      margin-top: 35;
     }
-    .contoh {
-      display: 'flex';
+    .about-title-parent{
+      padding: 0;
+      position: relative;
     }
-    #test {
-      margin: 0;
+    .sticky-dor {
+      position: absolute;
+      top: -35px;
+      right: 0;
+    }
+    .sticky-dor img  {
+      width: 115px;
+    }
+    .about-title-parent h1{
+      text-transform: capitalize;
+    }
+    .description-parent {
+      display: flex;
+    }
+    .description p {
+      font-family: sans-serif;
+    }
+    .image-container {
+      margin-right: 30px;
+    }
+    .image-container img {
+      width: 250px;
+    }
+    .description-container button {
+      background-color: #333333;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 15px;
+      text-transform: capitalize;
+    }
+
+    .angka-container {
+      display: flex;
+    }
+
+    .angka-item {
+      margin-right: 25px;
+      font-family: sans-serif;
+      padding: 0 10px;
+      border-radius: 20px;
+    }
+    @keyframes example {
+      0%   {background-color: red;}
+      25%  {background-color: yellow;}
+      50%  {background-color: blue;}
+      100% {background-color: green;}
+    }
+
+    .angka-item:hover{
+      animation-name: example;
+      animation-duration: 4s;
+    }
+
+    .angka-item h2 {
+      font-size: 20px;
+    }
+    .angka-item p {
+      font-size: 13px;
     }
   </style>
   <body>
-    <div class="contoh">
-      <h1>ini contoh gambar</h1>
-      <img src="2.jpg" class="gambar1"/>
-      <a href="about.html">about</a>
+    <div class="container">
+      <div class="about-title-parent">
+        <h1>about company</h1>
+        <div class="sticky-dor">
+          <img src="images/dor.png"/>
+        </div>
+      </div>
+      <div class="description-parent">
+        <div class="image-container">
+          <img src="images/left-image.png" />
+        </div>
+        <div class="description-container">
+          <button>about the company</button>
+          <div class="description">
+            <p>Innovative Solutions is a cutting-edge technology company that provides innovative solutions for businesses of all sizes. Founded in 2010, we are dedicated to helping our clients achieve their goals through our customized and effective technology solutions. With over a decade of experience, we have built a reputation for delivering high-quality services to our clients.</p>
+          </div>
+          <div class="angka-container">
+            <div class="angka-item">
+              <h2>20023</h2>
+              <p>Founded</p>
+            </div>
+            <div class="angka-item">
+              <h2>95</h2>
+              <p>Founded</p>
+            </div>
+            <div class="angka-item">
+              <h2>20023</h2>
+              <p>clients</p>
+            </div>
+            <div class="angka-item">
+              <h2>140</h2>
+              <p>Project done</p>
+            </div>
+            <div class="angka-item">
+              <h2>61</h2>
+              <p>5 stars review</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
